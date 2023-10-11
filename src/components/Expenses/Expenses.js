@@ -1,7 +1,7 @@
-import './Expenses.css';
+import '../UI/Expenses.css';
 import ExpenseItem from './ExpenseItem';
 
-function Expenses({expenses}) {
+const Expenses = ({expenses}) => {
     return (
         <div className='expenses'>
         <ExpenseItem 
@@ -21,8 +21,6 @@ function Expenses({expenses}) {
               amount={expenses[3].amount}
               date={expenses[3].date}></ExpenseItem>
         </div>
-
-
     );
 }
 
