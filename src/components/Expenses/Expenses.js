@@ -12,7 +12,14 @@ const Expenses = ({expenses}) => {
         <div>
         <div className='expenses'>
         <ExpensesFilter baseYear={filteredYear} onSelectedYear = {filterYearChangeHandler}></ExpensesFilter>
-        <ExpenseItem 
+        {expenses.map((expense) => (
+            <ExpenseItem 
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}></ExpenseItem>
+        ))
+}
+        {/* <ExpenseItem 
         title={expenses[0].title}
         amount={expenses[0].amount}
         date={expenses[0].date}></ExpenseItem>
@@ -27,7 +34,7 @@ const Expenses = ({expenses}) => {
       <ExpenseItem 
               title={expenses[3].title}
               amount={expenses[3].amount}
-              date={expenses[3].date}></ExpenseItem>
+              date={expenses[3].date}></ExpenseItem> */}
         </div>
         </div>
     );
