@@ -11,9 +11,10 @@ const Expenses = ({expenses}) => {
     return (
         <div>
         <div className='expenses'>
-        <ExpensesFilter baseYear={filteredYear} onSelectedYear = {filterYearChangeHandler}></ExpensesFilter>
+        <ExpensesFilter baseYear={filteredYear} onSelectedYear={filterYearChangeHandler}></ExpensesFilter>
         {expenses.map((expense) => (
             <ExpenseItem 
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}></ExpenseItem>
